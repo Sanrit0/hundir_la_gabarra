@@ -169,9 +169,22 @@ def jugar():
 
     disparo = lista_posiciones[np.random.randint(len(lista_posiciones),size=1)[0]]
 
+    origen_barco = None
     fin_juego = False
     tocado = 0
     cont = 0
+
+    time.sleep(0.5)
+    print(40 * '-')
+    print('Tu tablero:')
+    print(40 * '-')
+    imprimir_matriz(matriz_jugador)
+    print(40 * '-')
+    print('Tablero de la máquina:')
+    print(40 * '-')
+    imprimir_matriz(matriz_vista_jugador)
+    time.sleep(0.5)
+    
     while not fin_juego:
         turno_jugador = True
         while turno_jugador == True:
